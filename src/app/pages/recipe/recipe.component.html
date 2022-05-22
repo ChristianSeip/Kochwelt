@@ -1,0 +1,41 @@
+<main *ngIf="recipe.title">
+  <section>
+    <h1>{{recipe.title}}</h1>
+    <img class="recipe-banner" src="assets/images/preview/{{recipe.image}}" alt="Preview Image of {{recipe.title}}">
+    <ul class="inline-list keywords">
+      <li><img class="icon" src="assets/images/icons/clock-regular.svg" alt="Clock Icon"> {{recipe.duration}} Min.</li>
+      <li><img class="icon" src="assets/images/icons/brain-solid.svg" alt="Brain Icon"> {{recipe.skill}}</li>
+      <li><img class="icon" src="assets/images/icons/calendar-alt-regular.svg" alt="Calender Icon"> {{recipe.created}}</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="portions-input">
+      <div>
+        <span>Ingredients for </span>
+        <input type="number" [(ngModel)]="portions" (change)="calcIngredients()">
+      </div>
+      <button class="btn btn-primary" (click)="calcIngredients()">Portions</button>
+    </div>
+    <ul class="ingredient-list">
+      <li *ngFor="let item of ingredients">{{item.amount}} {{item.measure}} {{item.name}}</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Preparation</h2>
+    <ul class="inline-list keywords">
+      <li><img class="icon" src="assets/images/icons/clock-regular.svg" alt="Clock Icon"> {{recipe.prepare_duration}} Min.</li>
+      <li><img class="icon" src="assets/images/icons/clock-regular.svg" alt="Clock Icon"> Total: {{recipe.duration}} Min.</li>
+    </ul>
+    <p [innerHTML]="recipe.instructions">
+    </p>
+  </section>
+
+  <section>
+    <h4>Created by</h4>
+    <div class="author-info">
+      <img class="profile-picture" src="assets/images/user/{{recipe.author_image}}" alt="{{recipe.author}}"><span>{{recipe.author}}</span>
+    </div>
+  </section>
+</main>

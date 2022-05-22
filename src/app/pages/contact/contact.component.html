@@ -1,0 +1,27 @@
+<main>
+  <div class="form-container">
+    <h2>Contact us</h2>
+    <p>Please note: this is a demo. The form data will be saved, but may not be answered.<br>
+      In important cases, please use the contact details in the <a href="https://www.seip.io/legal">legal notice</a>.</p>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Your Name</mat-label>
+      <input matInput placeholder="Name" [(ngModel)]="name">
+      <mat-hint>Required (3 - 30 characters)</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Your Mail</mat-label>
+      <input matInput placeholder="you@example.com" [(ngModel)]="mail">
+      <mat-hint>Required (max 65 characters)</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Your Message</mat-label>
+      <textarea matInput placeholder="Message..." [(ngModel)]="message"></textarea>
+      <mat-hint>Required (Characters {{message.length}}/1000)</mat-hint>
+    </mat-form-field>
+
+    <button class="btn btn-primary" [disabled]="!isValidForm()" (click)="sendForm()">Send</button>
+  </div>
+</main>

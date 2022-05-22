@@ -1,1 +1,157 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: Raleway;
+  src: url(assets/fonts/Raleway.ttf);
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(assets/fonts/material-icons/MaterialIcons-Regular.ttf) format('truetype'),
+  local('MaterialIcons-Regular');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+html {
+  font-family: Raleway, sans-serif !important;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #f8f8f8;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+a {
+  color: #008000;
+  text-decoration: none;
+  &:hover {
+    color: #039103;
+  }
+}
+
+.bg {
+  background-color: #f8f8f8;
+}
+
+.bg-alt {
+  background-color: #efefef;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  border: unset;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 0.9rem;
+  &:disabled {
+    background-color: #d2d2d2 !important;
+    color: #403B3B !important;
+  }
+}
+
+.btn-primary {
+  background-color: #008000;
+  color: #f8f8f8;
+  &:hover {
+    background-color: #039103;
+    color: #f8f8f8;
+  }
+}
+
+.inline-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline-block;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+.fade-in {
+  display: block !important;
+  animation-name: FadeIn;
+}
+
+.fade-out {
+  display: block;
+  animation-name: FadeOut;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media screen and (max-width: 780px){
+}
+
+@keyframes FadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes SwingIn {
+  0% {
+    opacity: 0;
+    transform: rotateX(-100deg);
+    transform-origin: top;
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+    transform-origin: top;
+  }
+}

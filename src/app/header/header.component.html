@@ -1,0 +1,15 @@
+<header class="page-header">
+  <a href="https://cooking.seip.io"><img class="logo" src="assets/images/logo.png" alt="Logo Kochwelt"></a>
+  <nav class="main-navigation">
+    <div class="mobile-menu-icon" (click)="switchNavigation()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul class="main-navigation-list inline-list" [ngClass]="isNavVisible ? 'fade-in' : 'fade-out'">
+      <li><a routerLink="start">Start</a></li>
+      <li><a routerLink="recipe/3">Daily Special</a></li>
+      <li><a routerLink="contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,48 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #403B3B;
+  height: 120px;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  margin-top: 3rem;
+  color: #b2b2b2;
+  a {
+    color: #b2b2b2;
+    &:hover {
+      color: #f8f8f8;
+    }
+  }
+}
+
+.legal-links {
+  a {
+    color: #b2b2b2;
+    &:hover {
+      color: #f8f8f8;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px){
+  footer {
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
+  }
+}
+
+@media screen and (max-width: 780px){
+  footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px){
+  footer {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}

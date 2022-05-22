@@ -1,0 +1,38 @@
+<div *ngIf="spotlight.success" class="content-container bg recipe-spotlight">
+  <img src="assets/images/preview/{{spotlight.image}}">
+  <div class="spotlight-info">
+    <div>
+      <h2>{{spotlight.title}}</h2>
+      <p>{{spotlight.preamble}}</p>
+    </div>
+    <a class="btn btn-primary" routerLink="recipe/{{spotlight.id}}">Open Recipe</a>
+  </div>
+</div>
+
+<div class="content-container bg-alt">
+  <h2 class="text-center">Discover something new</h2>
+  <ul class="inline-list recommendation-list">
+    <li *ngFor="let item of recommended">
+      <a routerLink="recipe/{{item.id}}">
+        <div class="recommendation">
+          <img src="assets/images/preview/{{item.image}}" alt="Photo of {{item.title}}">
+          <span class="text-center">{{item.title}}</span>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div class="content-container bg">
+  <h2 class="text-center">Wok vs. Frying Pan: Which Should You Use?</h2>
+  <div class="blog-article">
+    <p>
+      Choosing between a Wok and a Frying Pan is not really about which one is better, but what you are going to be using them for.
+      Try making stir fry in a Frying Pan and you’ll see that while it may be doable, it’s not ideal.
+      There are some things you can’t do—you can’t deep fry in a Frying Pan and you can’t sear a whole steak in a Wok.
+      Professional chefs use both for their respective advantages and the same is likely true in your own home kitchen...<br>
+      <a title="Read more on madeincookware.com" href="https://madeincookware.com/blogs/to-wok-or-to-fry-that-is-the-question">Read more on madeincookware.com</a>.
+    </p>
+    <img src="assets/images/pan.jpg" alt="Image of a pan">
+  </div>
+</div>
